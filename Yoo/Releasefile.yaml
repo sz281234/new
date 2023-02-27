@@ -40,7 +40,7 @@ spec:
 
       After the task is completed, please mark it as Completed in Release.
     roles:
-    - Watcher
+    - Watcher ${release.owner}
     - Release Admin
     - Task Owner
   - notification: TASK_FLAGGED
