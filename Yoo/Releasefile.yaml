@@ -1,6 +1,6 @@
 # Exported from:        http://SAIs-MacBook-Pro.local:5517/
 # Release version:      22.3.6
-# Date created:         Mon Feb 27 11:03:40 EST 2023
+# Date created:         Mon Feb 27 11:22:44 EST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -27,9 +27,23 @@ spec:
     - name: "1"
       type: xlrelease.ScriptTask
       script: print "Hi"
+    - name: "2"
+      type: xlrelease.Task
     color: '#3d6c9e'
   scriptUsername: admin
   scriptUserPassword: !value "xlrelease_Release_test_scriptUserPassword"
+  riskProfile: Default risk profile
+- template: test-2
+  scheduledStartDate: 2023-02-27T09:00:00-05:00
+  phases:
+  - phase: Ph1
+    tasks:
+    - name: "2"
+      type: xlrelease.ScriptTask
+      script: print "script-2"
+    color: '#3d6c9e'
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_test_2_scriptUserPassword"
   riskProfile: Default risk profile
 - notifications:
   - notification: TASK_OVERDUE
@@ -40,7 +54,7 @@ spec:
 
       After the task is completed, please mark it as Completed in Release.
     roles:
-    - Watcher ${release.owner}
+    - Watcher
     - Release Admin
     - Task Owner
   - notification: TASK_FLAGGED
