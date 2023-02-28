@@ -1,6 +1,6 @@
 # Exported from:        http://SAIs-MacBook-Pro.local:5517/
 # Release version:      22.3.6
-# Date created:         Mon Feb 27 11:22:44 EST 2023
+# Date created:         Tue Feb 28 09:58:03 EST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -19,6 +19,13 @@ spec:
   sourceServer: Deploy
   filteredFolders:
   - Applications
+- template: helllllllll
+  scheduledStartDate: 2023-02-28T09:00:00-05:00
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_helllllllll_scriptUserPassword"
+  riskProfile: Default risk profile
 - template: test
   scheduledStartDate: 2023-02-27T09:00:00-05:00
   phases:
