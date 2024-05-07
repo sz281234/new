@@ -1,6 +1,6 @@
 # Exported from:        http://Pranavs-MacBook-Pro.local:5516/
 # Release version:      23.3.0
-# Date created:         Tue May 07 09:02:05 EDT 2024
+# Date created:         Tue May 07 13:59:03 EDT 2024
 
 ---
 apiVersion: xl-release/v1
@@ -34,6 +34,19 @@ spec:
         value: title3
       template: Samples & Tutorials/Sample Release Template
       folder: Samples & Tutorials
+    - name: dfdf
+      type: xlrelease.GateTask
+    - name: sdd
+      type: xlrelease.Task
+    - name: df
+      type: xlrelease.Task
+    - name: ddas
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+    - name: df
+      type: xlrelease.CreateReleaseTask
+    - name: bbb
+      type: xlrelease.RemoteCompletionTask
   riskProfile: Default risk profile
   author: admin
   defaultTargetFolder: ./
