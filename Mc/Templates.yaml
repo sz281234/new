@@ -1,0 +1,63 @@
+# Exported from:        http://Pranavs-MacBook-Pro.local:5516/
+# Release version:      23.3.0
+# Date created:         Tue May 07 14:56:21 EDT 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: MC
+spec:
+- template: import yaml
+  scheduledStartDate: 2024-04-05T09:00:00-04:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: create RElease
+      type: xlrelease.CreateReleaseTask
+      newReleaseTitle: x3
+      templateVariables:
+      - type: xlrelease.StringVariable
+        key: ACC environment
+        label: Title
+        description: The title of the item.
+        value: title1
+      - type: xlrelease.StringVariable
+        key: QA environment
+        label: Title
+        description: The title of the item.
+        value: title2
+      - type: xlrelease.StringVariable
+        key: package
+        label: Title
+        description: The title of the item.
+        value: title3
+      template: Samples & Tutorials/Sample Release Template
+      folder: Samples & Tutorials
+    - name: dfdf
+      type: xlrelease.GateTask
+    - name: sdd
+      type: xlrelease.Task
+    - name: df
+      type: xlrelease.Task
+    - name: ddas
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+    - name: df
+      type: xlrelease.CreateReleaseTask
+    - name: bbb
+      type: xlrelease.RemoteCompletionTask
+    - name: deploy
+      type: xldeploy.Deploy
+      username: admin
+      password: !value "xldeploy_Deploy_deploy_password"
+      deploymentPackage: xuyz
+      deploymentEnvironment: avc
+      numberOfContinueRetrials: 0
+      pollingInterval: 10
+      numberOfPollingTrials: 0
+      displayStepLogs: true
+      connectionRetries: 10
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
