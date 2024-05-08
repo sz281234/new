@@ -1,6 +1,6 @@
 # Exported from:        http://Pranavs-MacBook-Pro.local:5516/
 # Release version:      23.3.4
-# Date created:         Wed May 08 12:11:59 EDT 2024
+# Date created:         Wed May 08 12:34:32 EDT 2024
 
 ---
 apiVersion: xl-release/v1
@@ -16,7 +16,6 @@ spec:
     - name: manual1
       type: xlrelease.Task
       tags:
-      - task_tag1
       - task_tag2
     - name: sleep
       type: xlrelease.ScriptTask
@@ -41,6 +40,10 @@ spec:
         description: The owner of the item.
         value: admin
       releaseTags:
+      - tag6
+      - tag7
+      - tag4
+      - tag5
       - tag2
       - tag3
       riskProfile: Default risk profile
