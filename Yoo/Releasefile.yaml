@@ -1,6 +1,6 @@
 # Exported from:        http://Sais-MacBook-Pro.local:5516/
 # Release version:      23.3.0
-# Date created:         Thu May 09 10:57:41 EDT 2024
+# Date created:         Thu May 09 11:01:42 EDT 2024
 
 ---
 apiVersion: xl-release/v1
@@ -25,6 +25,13 @@ spec:
   - phase: New Phase
   scriptUsername: admin
   riskProfile: Default risk profile
+- template: jython
+  scheduledStartDate: 2024-05-09T09:00:00-04:00
+  phases:
+  - phase: New Phase
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
 - template: test
   scheduledStartDate: 2023-02-27T09:00:00-05:00
   dueDate: 2023-02-27T10:00:00-05:00
