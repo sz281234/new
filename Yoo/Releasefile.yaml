@@ -1,6 +1,6 @@
 # Exported from:        http://Sais-MacBook-Pro.local:5516/
 # Release version:      23.3.0
-# Date created:         Thu May 09 11:01:42 EDT 2024
+# Date created:         Thu May 09 11:04:04 EDT 2024
 
 ---
 apiVersion: xl-release/v1
@@ -18,6 +18,13 @@ spec:
   eventSource: Deploy
   filteredFolders:
   - Applications
+- template: bingo2
+  scheduledStartDate: 2024-05-09T09:00:00-04:00
+  phases:
+  - phase: New Phase
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
 - template: helllllllll
   scheduledStartDate: 2023-02-28T09:00:00-05:00
   dueDate: 2023-02-28T10:00:00-05:00
